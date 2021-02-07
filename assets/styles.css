@@ -1,0 +1,161 @@
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 900px) {
+    .pics {
+    min-width: 19%;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 1200px) {
+    .pics {
+    min-width: 24%;
+    }
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 900px) {
+    .pics {
+    min-width: 32%;
+    }
+
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .pics {
+    min-width: 48%;
+    }
+
+}
+
+.container-carousel .carousel {
+    display: flex;
+}
+
+.container-carousel {
+    overflow-x: scroll; 
+    overflow : hidden;
+    -moz-overflow:hidden;
+    scroll-behavior: smooth;
+}
+
+.genre {
+    width: 10.75rem;
+}
+
+.parent {
+    width: 100%;
+    overflow: hidden;
+}
+
+.child {
+    transition: all .5s;
+}
+
+.parent:hover .child, .parent:focus .child{
+    transform: scale(1.25);
+}
+
+.container-display {
+    display: flex; /* flex */
+    justify-content: center; /* justify-content*/
+    align-items: center; /*items-center */
+    box-sizing: border-box; /*box-border */
+}
+
+.container {
+    position: relative; /*relative*/
+    min-width: 20%;
+    display: flex;
+}
+
+.container .box {
+    position: relative;
+    width: 275px;
+    height: 275px;
+    overflow: hidden; /* overflow-hidden */
+    transition: 0.5s;
+}
+
+.container .box:hover {
+    z-index: 20; /* z-20 */
+    transform: scale(1.25); /*transform hover:scale-125 */
+    background-color: rgb(27, 28, 27); /*bg-gray-900 */
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5) /*shadow-md */
+}
+
+.container .box .imgBox {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 50%;
+}
+
+.container .box .imgBox:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    width: 100%;
+    height: 50%; /* h-3/6 */
+    transition: 0.5s;
+    opacity: 0; /* opacity-0 */
+}
+
+.container .box:hover .imgBox:before {
+    opacity: 1; /* opacity-100 */
+}
+
+.container .box .imgBox .img {
+    position:absolute; /* relative */
+    top: 0; /* top-0 */
+    left: 0; /* left-0 */
+}
+
+.container .box .content {
+    display: flex;
+    align-items: flex-end; /*items-end */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    padding: 20px; /*p-20 */
+}
+
+.container .box .content .p {
+    font-size: 20px; /* text-sm */
+    padding-top: 10px;
+    transform: translateY(300px); /* transform translate-y-0 */
+}
+
+.container .box:hover .content .p {
+    transform: translateY(0); /* transform translate-y-0 */
+    /* transition-delay: (0.7s); */
+    /* transition: 0.5s; */
+}
+
+.container .box .content .border-red {
+    font-size : 12px; /* text-sm */
+    transform: translateY(300px); /* transform translate-y-0 */
+    /* transition: 0.5s; */
+}
+
+.container .box:hover .content .border-red {
+    transform: translateY(0); /* transform translate-y-0 */
+    /* transition-delay:(0.7s); */
+}
+
+/* Dimanche 07 23h42 ;
+
+
+TV Show by genre, zoom (Action non zoomé)
+
+Container convert css 
+
+Container in carousel
+
+Carousel work (+ responsive)*/

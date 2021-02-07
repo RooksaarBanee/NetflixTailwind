@@ -5,104 +5,1588 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Netflix</title>
 
-    <!-- Tailwind css cdn -->
+    <!-- Link Icone N(netflix) -->
+    <link rel="icon" type="image/png" href="favicon.png"/>
+
+    <!-- Tailwind css -->
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css">
 
     <!-- Font awesome icons (free version) -->
     <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
     
-    <!-- Link Icone N(netflix) -->
-    <link rel="icon" type="image/png" href="favicon.png" />
-    
+    <link rel="stylesheet" href="assets/styles.css">
 </head>
 
-<body class="bg-auto bg-gray-900">
+<body class="bg-black ">
 
-
-    <!-- Section Logo -->
-    <section class="cursor-pointer ">
-
-        <a href="onClickLogo">
-            <img src="./Netflix_logo.png" alt="Netflix_logo" class="float-left mx-10 my-5 w-20 ">
-        </a>
-
-    <!-- Icônes logo -->
-        <div class="text-white w-full space-x-6 mx-90 ">
-
-            <i class="fas fa-search "></i>
-            <i class="fas fa-gift "></i>
-            <i class="fas fa-bell"></i>
-            <i class="fas fa-user-circle"></i>
+        <header class="text-white fixed top-0 bg-gradient-to-b from-black w-full z-50">
+            <div class="px-12 flex flex-wrap p-5 flex-col xl:flex-row items-center">
+                <a class="flex items-center mb-4 md:mb-0">
+                    <img src="https://assets.nflxext.com/en_us/layout/ecweb/common/logo-shadow2x.png" class="w-24 cursor-pointer" alt="">
+                </a>
+                
+                <!-- netflix navbar -->
+                <div class="hidden xl:flex flex-row space-x-6 w-1/2 ml-10 text-sm font-light">
+                    <a href="#" class="font-medium">Home</a>
+                    <a href="#" class="hover:text-gray-400">TV Shows</a>
+                    <a href="#" class="hover:text-gray-400">Movies</a>
+                    <a href="#" class="hover:text-gray-400">New & Popular</a>
+                    <a href="#" class="hover:text-gray-400">My List</a>
+                    <a href="#" class="hover:text-gray-400">Watch Again</a>
+                </div>
     
-        </div>
+                <!-- user navbar -->
+                <nav class="md:ml-auto hidden xl:flex flex-wrap space-x-8 items-center text-base justify-center font-semibold">
+                    <i class="fas fa-search text-xl cursor-pointer"></i>
+                    <i class="fas fa-gift text-xl cursor-pointer"></i>
+                    <i class="fas fa-bell text-xl cursor-pointer"></i>
+                    <button class="flex items-center">
+                        <img src="./assets/img/avatar.png" alt="" class="w-8 h-8 rounded">
+                        <svg class="w-5 h-5 stroke-current text-white ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                </nav>
+            </div>
+        </header>  
     
-
-    <!-- Section Barre de navigation -->
-        <div id="NavBar" class="text-white font-bold space-x-5">
-
-            <a href="#home">Home</a>
-            <a href="#tvshows">Tv Shows</a>
-            <a href="#movies">Movies</a>
-            <a href="#newpopular">New & Popular</a>
-            <a href="#mylist">My List</a>
-            <a href="#watchagain">Watch Again</a>
-
-        </div>
-
-    </section>
-
-
-    <!-- Section Image Background-->
-    <section class= "ml-10 pt-24">
-
-        <img src="./1200px-Desperate_Housewives_Logo.svg.png" alt="1200px-Desperate_Housewives_Logo" class="">
-        <img src="./desperate-housewives-c-est-fini.jpg" alt="desperate-housewives-c-est-fini" class="object-cover w-full">
-
-    </section>
-
-
-    <!-- Section de gauche Description de la série/film -->
-    <section class="text-white font-serif fraunces flex w-full space-x-5 ml-14 mt-3">
-
-        <div class="text-xl mx-5 my-9">
-
-            <p>Saison 1</p>
-
-        </div>
+        <!-- Film à l'affiche -->
+        <div class="h-screen">
+            <div class="absolute h-full z-10 ">
+                <div class="px-16 h-full flex items-center justify-start"> 
+                    <div class="flex flex-col xl:w-2/6 lg:w-2/6 md:w-3/6 sm:w-3/6 space-y-2 py-12 ">
+                        
+                        <!-- Description film à l'affiche -->
+                        <p class="font-serif font-bold text-pink-500 text-xl uppercase ">The Bridgerton Chronicles</p>
+                        <p class="font-bold text-lg text-pink-400 text-justify">Season 1</p>
+                        <p class="text-lg text-pink-300 text-justify ">As Daphne makes her London debut, a new tabloid scandal is stirring up good society and Simon, the coveted Duke of Hastings, returns to the city.</p>
+                        
+                        <!-- Bouton play/info -->
+                        <div class="flex space-x-4 flex-row w-full">
+                            <button class="px-8 mt-5 items-center shadow-md rounded-lg bg-white  space-x-2 py-2 justify-center flex">
+                                <i class="fas fa-play"></i>
+                                <span class="text-gray-800 font-semibold">Play</span>
+                            </button>
+                            <button class=" px-8 mt-5 items-center shadow-md rounded-lg bg-gray-800 bg-opacity-50 space-x-2 py-2 justify-center flex">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span class="text-white font-semibold">More Info</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-        <div class="text-s font-bold font-thin text-xs text-gray-300">
-
-             <p>Mary Alice mène avec son époux et son fils,<br> 
-                une vie de famille exemplaire dans leur paisible maison de la banlieue chic de Wisteria Lane. <br>
-                Pourtant, un jour qui semble se dérouler comme les autres, <br> 
-                elle se suicide laissant tout le quartier dans le trouble. <br>
-                Ses 4 amies les plus proches sont très étonnées et choquées et ne trouvent aucune raison valable à son suicide. <br>
-                Mais progressivement, des choses étranges leur font penser que son suicide n'est peut-être pas si innocent qu'il en a l'air.</p>
-
+            <!-- Background-->
+            <div class="absolute w-full h-48 bottom-0 bg-gradient-to-t from-black"></div>
+            <img src="assets/img/background.jpg" class="w-full h-screen object-cover -mt-2">       
         </div>
-           
-    </section>
     
-    <!-- Bouton Read/ Infos -->
-    <div class="flex space-x-4 pt-2">
-        <button class="flex space-x-1 bg-white text-black py-1 px-4 rounded">
-          <a href="#"><i class="font-thin fas fa-play mt-1"></i></a>
+        <!-- catalog New series-->
+        <section class="text-white py-8">
 
-            <p class="font-bold font-thin">
-                <a href="https://www.netflix.com/watch/81009646?trackId=13752289&tctx=0%2C0%2C1c54c178f974607f5d801e91496d07c41b5dd108%3A4c9505b672592f607a3c21c10faf27a88deca13f%2C1c54c178f974607f5d801e91496d07c41b5dd108%3A4c9505b672592f607a3c21c10faf27a88deca13f%2Cunknown%2C">Read</a>
-            </p>
-        </button>
 
-        <button class="flex space-x-1 bg-gray-700 text-white py-1 px-4 rounded">
-          <a href="#"><i class="far fa-info-circle mt-1"></i></a>
-            <p class="font-bold font-thin">More Info</p>
-        </button>
-    </div>
+        <div class="flex pl-4 md:pl-8 lg:pl-12 xl:pl-16 py-4 text-white">
+        <p class="py-2 font-semibold text-xl">New series</p>
+        <div class="flex items-center relative">
+            <div class="flex py-8 px-8">
+                <div class="container-display">
+                    <div class="container grid gap-2">
+                        <div class="box">
+                            <div class="imgBox">
+                                <img src="assets/img/lacasadepapel.png" alt="" class="rounded">
+                            </div>
+                            <div class="content">
+                                <div>
+                                    <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p>
+                                    <p>S01:E01<span class="font-light"><br>La casa de papel une série espagnol</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-display">
+                    <div class="container grid gap-2">
+                        <div class="box">
+                            <div class="imgBox">
+                                <img src="assets/img/larevolution.png" alt="" class="rounded">
+                            </div>
+                            <div class="content">
+                                <div>
+                                    <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p>
+                                    <p>S01:E01<span class="font-light"><br>Une série inspiré de la 2nd guerre...</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-display">
+                    <div class="container grid gap-2">
+                        <div class="box">
+                            <div class="imgBox">
+                                <img src="assets/img/larnacoeurcomedie.png" alt="" class="rounded">
+                            </div>
+                            <div class="content">
+                                <div>
+                                    <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p>
+                                    <p>S01:E01<span class="font-light"><br> Las Vegas dans toute sa splendeur, la fête ne fait que commencé</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-display">
+                    <div class="container grid gap-2">
+                        <div class="box">
+                            <div class="imgBox">
+                                <img src="assets/img/permisthriller.png" alt="" class="rounded">
+                            </div>
+                            <div class="content">
+                                <div>
+                                    <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                    <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-</body>
+
+        <!-- My List -->
+        <div class="pl-4 md:pl-8 lg:pl-12 xl:pl-16 py-4 text-white">
+            <p class="py-2 font-semibold text-xl">My List</p>
+            <div class="flex items-center relative">
+                <!-- arrow left -->
+                <div class="absolute left-0 leftArrow1" onClick="leftScroll('.scroll1','.leftArrow1')">
+                    <button class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-left"></i></button>
+                </div>
+                <!--Container Carousel-->
+                <div class="container-carousel scroll1 overflow-hidden">
+                    <!--Carousel-->
+                    <div class="flex py-10 px-14">
+                        <div class="carousel grid gap-2">
+                            <div class="box">
+                                <div class="imgBox">
+                                    <div class="pics">
+                                        <a href="#"><img src="assets/img/boblazar.png" alt="" class="rounded"></a>
+                                    </div>
+                                    <div class="content">
+                                        <div>
+                                            <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                            <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="imgBox">
+                                <div class="pics">
+                                    <a href="#"><img src="assets/img/brainonfire.png" alt="" class="rounded"></a>
+                                </div>
+                                <div class="content">
+                                    <div>
+                                        <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                        <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="imgBox">
+                                <div class="pics">
+                                    <a href="#"><img src="assets/img/lupin.png" alt="" class="rounded"></a>
+                                </div>
+                                <div class="content">
+                                    <div>
+                                        <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                        <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="imgBox">
+                                <div class="pics">
+                                    <a href="#"><img src="assets/img/birdbox.png" alt="" class="rounded"></a>
+                                </div>
+                                <div class="content">
+                                    <div>
+                                        <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                        <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="imgBox">
+                                <div class="pics">
+                                    <a href="#"><img src="assets/img/charliecomedie.png" alt="" class="rounded"></a>
+                                </div>
+                                <div class="content">
+                                    <div>
+                                        <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                        <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="imgBox">
+                                <div class="pics">
+                                    <a href="#"><img src="assets/img/blackmirror.png" alt="" class="rounded"></a>
+                                </div>
+                                <div class="content">
+                                    <div>
+                                        <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                        <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="imgBox">
+                                <div class="pics">
+                                    <a href="#"><img src="assets/img/corpsebride.png" alt="" class="rounded"></a>
+                                </div>
+                                <div class="content">
+                                    <div>
+                                        <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                        <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="imgBox">
+                                <div class="pics">
+                                    <a href="#"><img src="assets/img/crashlandingonyou.png" alt="" class="rounded"></a>
+                                </div>
+                                <div class="content">
+                                    <div>
+                                        <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                        <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="imgBox">
+                                <div class="pics">
+                                    <a href="#"><img src="assets/img/cursed.png" alt="" class="rounded"></a>
+                                </div>
+                                <div class="content">
+                                    <div>
+                                        <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                        <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    <div class="box">
+                        <div class="imgBox">
+                            <div class="pics">
+                                <a href="#"><img src="assets/img/darktourist.png" alt="" class="rounded"></a>
+                            </div>
+                            <div class="content">
+                                <div>
+                                    <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                    <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!-- arrow right -->
+                <div class="absolute right-0 rightArrow1" onClick="rightScroll('.scroll1','.rightArrow1')">
+                    <button class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-right"></i></button>
+                </div>
+            </div>
+        </div> 
+
+            <!-- TV Shows -->
+            <div class="pl-4 md:pl-8 lg:pl-12 xl:pl-16 py-4 text-white">
+                <p class="py-2 font-semibold text-xl">TV Shows</p>
+                <div class="flex items-center relative">
+    
+                    <!-- arrow left -->
+                    <div class="absolute left-0 left-Arrow2" onClick="leftScroll('.scroll2','leftArrow2')">
+                        <button class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-left"></i></button>
+                    </div>
+                    <!--Container Carousel-->
+                    <div class="container-carousel carousel scroll2 overflow-hidden">
+                        <!--Carousel-->
+                        <div class=" carousel grid gap-2">
+                            <div class="flex py-10 px-14">
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/13reasonUS.png" alt="" class="rounded"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div>
+                                                <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                                <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/2mamans.png" alt="" class="rounded"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div>
+                                                <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                                <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/ajin.png" alt="" class="rounded"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div>
+                                                <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                                <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/ajqueen.png" alt="" class="rounded"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div>
+                                                <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                                <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/aliceborderthriller.png" alt="" class="rounded"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div>
+                                                <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                                <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/alienworlds.png" alt="" class="rounded"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div>
+                                                <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                                <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/amelie.png" alt="" class="rounded"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div>
+                                                <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                                <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/orphanblackthriller.png" alt="" class="rounded"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div>
+                                                <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                                <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/birdbox.png" alt="" class="rounded"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div>
+                                                <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                                <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/blackmirror.png" alt="" class="rounded"></a>
+                                        </div>
+                                        <div class="content">
+                                            <div>
+                                                <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                                <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+    
+                    <!-- arrow right -->
+                    <div class="absolute right-0 rightArrow2" onClick="rightScroll('.scroll2','.rightArrow2')">
+                        <button class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-right"></i></button>
+                    </div>
+                </div>
+            </div>   
+    
+            <!-- Trending Nows -->
+            <div class="pl-4 md:pl-8 lg:pl-12 xl:pl-16 py-4 text-white">
+                <p class="py-2 font-semibold text-xl">Trending Nows</p>
+                <div class="flex items-center relative">
+    
+                    <!-- Arrow left -->
+                    <div class="absolute left-0 leftArrow3" onClick="leftScroll('.scroll3','.leftArrow3')">
+                        <button class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-left"></i></button>
+                    </div>
+                    <!--Container Carousel-->
+                    <div class="container-carousel scroll3 overflow-hidden">
+                        <!--Carousel-->
+                        <div class="carousel grid gap-2">
+                            <div class="flex py-10 px-14">
+                                <div class="box">
+                                <div class="imgBox">
+                                    <div class="pics">
+                                        <a href="#"><img src="assets/img/dclegendoftomorrow.png" alt="" class="rounded"></a>
+                                    </div>
+                                    <div class="content">
+                                        <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                        <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                    </div>
+                                </div>
+                                </div>
+                            <div class="box">
+                                <div class="imgBox">
+                                    <div class="pics">
+                                        <a href="#"><img src="assets/img/deadtome.png" alt="" class="rounded"></a>
+                                    </div>
+                                    <div class="content">
+                                        <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                        <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="imgBox">
+                                    <div class="pics">
+                                        <a href="#"><img src="assets/img/deathto2020.png" alt="" class="rounded"></a>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                    <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="imgBox">
+                                    <div class="pics">
+                                        <a href="#"><img src="assets/img/destin.png" alt="" class="rounded"></a>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                    <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="imgBox">
+                                    <div class="pics">
+                                        <a href="#"><img src="assets/img/deadtome.png" alt="" class="rounded"></a>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                    <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="imgBox">
+                                    <div class="pics">
+                                        <a href="#"><img src="assets/img/doctorstranger.png" alt="" class="rounded"></a>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                    <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="imgBox">
+                                    <div class="pics">
+                                        <a href="#"><img src="assets/img/emilyinparis.png" alt="" class="rounded"></a>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                    <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="imgBox">
+                                    <div class="pics">
+                                        <a href="#"><img src="assets/img/french.png" alt="" class="rounded"></a>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                    <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="imgBox">
+                                    <div class="pics">
+                                        <a href="#"><img src="assets/img/ggirls.png" alt="" class="rounded"></a>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                    <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="imgBox">
+                                    <div class="pics">
+                                        <a href="#"><img src="assets/img/h.png" alt="" class="rounded"></a>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                    <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+    
+                    <!-- arrow right -->
+                    <div class="absolute right-0 rightArrow3" onClick="rightScroll('.scroll3','.rightArrow3')">
+                        <button class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-right"></i></button>
+                    </div>
+                </div>
+            </div>   
+
+
+            <!-- Watch It Again -->
+            <div class="pl-4 md:pl-8 lg:pl-12 xl:pl-16 py-4 text-white">
+                <p class="py-2 font-semibold text-xl">Watch It Again</p>
+                <div class="flex items-center relative">
+
+                    <!-- arrow left -->
+                    <div class="absolute left-0 leftArrow4" onClick="leftScroll('.scroll4','.leftArrow4')">
+                        <button id="" class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-left"></i></button>
+                    </div>
+                    <!--Container Carousel-->
+                    <div class="container-carousel scroll4 overflow-hidden">
+                       <!--Carousel--> 
+                       <div class="carousel grid gap-2">
+                           <div class="flex">
+                               <div class="box">
+                                   <div class="imgBox">
+                                    <div class="pics">
+                                        <a href="#"><img src="assets/img/blackmirror.png" alt="" class="rounded"></a>
+                                    </div>
+                                   </div>
+                                   <div class="content">
+                                    <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                    <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                   </div>
+                               </div>
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/boblazar.png" alt="" class="rounded"></a>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                        <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                    </div>
+                                </div>
+                                
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/amelie.png" alt="" class="rounded"></a>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                        <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                    </div>
+                                </div>
+                                
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/americanbarbecueshowdown.png" alt="" class="rounded"></a>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                        <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                    </div>
+                                </div>
+                                
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/americangangster.png" alt="" class="rounded"></a>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                        <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                    </div>
+                                </div>
+                                
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/theuniverse.png" alt="" class="rounded"></a>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                        <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                    </div>
+                                </div>
+                                
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/birdbox.png" alt="" class="rounded"></a>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                        <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                    </div>
+                                </div>
+                                
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/blackmirror.png" alt="" class="rounded"></a>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                        <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                    </div>
+                                </div>
+                                
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/apretoithriller.png" alt="" class="rounded"></a>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                        <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/brainonfire.png" alt="" class="rounded"></a>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
+                                        <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                    </div>
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+
+                    <!-- Arrow Right -->
+                    <div class="absolute right-0 rightArrow4" onClick="rightScroll('.scroll4','.rightArrow4')">
+                        <button id="" class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-right"></i></button>
+                    </div>
+                </div>
+            </div>
+    
+
+            <!-- Tv shows by genre -->
+            <div class="px-4 md:px-8 lg:px-12 xl:px-16 py-4 text-white">
+                <p class="py-2 font-semibold text-xl">TV Shows by Genre</p>
+                <div class="grid gap-2 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7">
+                    <div class="genre">
+                        <div class="w-full overflow-hidden w-48 h-18 rounded">
+                            <div class="transform hover:scale-125 transition duration-500 ease-in-out">
+                                <a href="#" class="absolute font-semibold px-2 py-5 w-48 h-18 bg-gradient-to-r from-red-500 rounded">Action</a>
+                                <img src="assets/img/actionicone.png" alt="" class="rounded">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="genre">
+                        <div class="w-full overflow-hidden rounded">
+                            <div class="transform hover:scale-125 transition duration-500 ease-in-out">
+                                <a href="#" class="absolute font-semibold px-2 py-5 w-48 h-18 bg-gradient-to-r from-blue-500 rounded">Anime</a>
+                                <img src="assets/img/animeicone.png" alt="" class="rounded">
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="genre">
+                        <div class="w-full overflow-hidden rounded">
+                            <div class="transform hover:scale-125 transition duration-500 ease-in-out">
+                                <a href="#" class="absolute font-semibold px-2 py-5 w-48 h-18 bg-gradient-to-r from-orange-500 rounded">Children</a>
+                                <img src="assets/img/childrenicone.png" alt="" class="rounded">
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="genre">
+                        <div class="w-full overflow-hidden rounded">
+                            <div class="transform hover:scale-125 transition duration-500 ease-in-out">
+                                <a href="#" class="absolute font-semibold px-2 py-5 w-48 h-18 bg-gradient-to-r from-yellow-500 rounded">Comedy</a>
+                                <img src="assets/img/comedyicone.png" alt="" class="rounded">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="genre">
+                        <div class="w-full overflow-hidden rounded">
+                            <div class="transform hover:scale-125 transition duration-500 ease-in-out">
+                                <a href="#" class="absolute font-semibold px-2 py-5 w-48 h-18 bg-gradient-to-r from-orange-500 rounded">Docuseries</a>
+                                <img src="assets/img/docuseriesicone.png" alt="" class="rounded">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="genre">
+                        <div class="w-full overflow-hidden rounded">
+                            <div class="transform hover:scale-125 transition duration-500 ease-in-out">
+                                <a href="#" class="absolute font-semibold px-2 py-5 w-48 h-18 bg-gradient-to-r from-red-500 rounded">Drama</a>
+                                <img src="assets/img/dramaicone.png" alt="" class="rounded">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="genre">
+                        <div class="w-full overflow-hidden rounded">
+                            <div class="transform hover:scale-125 transition duration-500 ease-in-out">
+                                <a href="#" class="absolute font-semibold px-2 py-5 w-48 h-18 bg-gradient-to-r from-blue-500 rounded">French</a>
+                                <img src="assets/img/fantasyicone.png" alt="" class="rounded">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="genre">
+                        <div class="w-full overflow-hidden rounded">
+                            <div class="transform hover:scale-125 transition duration-500 ease-in-out">
+                                <a href="#" class="absolute font-semibold px-2 py-5 w-48 h-18 bg-gradient-to-r from-red-500 rounded">Horror</a>
+                                <img src="assets/img/horroricone.png" alt="" class="rounded">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="genre">
+                        <div class="w-full overflow-hidden rounded">
+                            <div class="transform hover:scale-125 transition duration-500 ease-in-out">
+                                <a href="#" class="absolute font-semibold px-2 py-5 w-48 h-18 bg-gradient-to-r from-green-500 rounded">Reality</a>
+                                <img src="assets/img/realityicone.png" alt="" class="rounded">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="genre">
+                        <div class="w-full overflow-hidden rounded">
+                            <div class="transform hover:scale-125 transition duration-500 ease-in-out">
+                                <a href="#" class="absolute font-semibold px-2 py-5 w-48 h-18 bg-gradient-to-r from-green-500 rounded">Romance</a>
+                                <img src="assets/img/romanceicone.png" alt="" class="rounded">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="genre">
+                        <div class="w-full overflow-hidden rounded">
+                            <div class="transform hover:scale-125 transition duration-500 ease-in-out">
+                                <a href="#" class="absolute font-semibold px-2 py-5 w-48 h-18 bg-gradient-to-r from-green-500 rounded">Thriller</a>
+                                <img src="assets/img/thrillericone.png" alt="" class="rounded">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Netflix Originals -->
+            <div class="pl-4 md:pl-8 lg:pl-12 xl:pl-16 py-4 text-white">
+                <p class="py-2 font-semibold text-xl">Netflix Originals</p>
+                <div class="flex items-center relative">
+                    <!-- arrow left -->
+                    <div class="absolute left-0 leftArrow5" onClick="leftScroll('.scroll5','.leftArrow5')">
+                        <button id="" class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-left"></i></button>
+                    </div>
+                    <!--Container Carousel-->
+                    <div class="container-carousel scroll5 overflow-hidden">
+                        <!--Carousel-->
+                        <div class="carousel grid gap-2 ">
+                            <div class="flex">
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/10%petit.png" alt="" class="rounded"></a>
+                                        </div>
+                                        <div class="content">
+                                            <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-check-circle text-2xl"></i><i class="fas fa-thumbs-up text-xl"></i><i class="fas fa-thumbs-down text-xl"><i class="fas fa-arrow-alt-circle-down"></i></i></p>
+                                            <p class="text-green-500 font-semibold">Nouveau<p class="border-2 border-gray-500 border-opacity-75 font-white font-semibold">16+</p><span class="font-semibold">Enfant - Tradition</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/bridgepetit.png" alt="" class="rounded"></a>
+                                        </div>
+                                        <div class="content">
+                                            <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-check-circle text-2xl"></i><i class="fas fa-thumbs-up text-xl"></i><i class="fas fa-thumbs-down text-xl"><i class="fas fa-arrow-alt-circle-down"></i></i></p>
+                                            <p class="text-green-500 font-semibold">Nouveau<p class="border-2 border-gray-500 border-opacity-75 font-white font-semibold">16+</p><span class="font-semibold">Enfant - Tradition</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/desenchanterpetit.png" alt="" class="rounded"></a>
+                                        </div>
+                                        <div class="content">
+                                            <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-check-circle text-2xl"></i><i class="fas fa-thumbs-up text-xl"></i><i class="fas fa-thumbs-down text-xl"><i class="fas fa-arrow-alt-circle-down"></i></i></p>
+                                            <p class="text-green-500 font-semibold">Nouveau<p class="border-2 border-gray-500 border-opacity-75 font-white font-semibold">16+</p><span class="font-semibold">Enfant - Tradition</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/jurassicpetit.png" alt="" class="rounded"></a>
+                                        </div>
+                                        <div class="content">
+                                            <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-check-circle text-2xl"></i><i class="fas fa-thumbs-up text-xl"></i><i class="fas fa-thumbs-down text-xl"><i class="fas fa-arrow-alt-circle-down"></i></i></p>
+                                            <p class="text-green-500 font-semibold">Nouveau<p class="border-2 border-gray-500 border-opacity-75 font-white font-semibold">16+</p><span class="font-semibold">Enfant - Tradition</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/lejeudedamepetit.png" alt="" class="rounded"></a>
+                                        </div>
+                                        <div class="content">
+                                            <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-check-circle text-2xl"></i><i class="fas fa-thumbs-up text-xl"></i><i class="fas fa-thumbs-down text-xl"><i class="fas fa-arrow-alt-circle-down"></i></i></p>
+                                            <p class="text-green-500 font-semibold">Nouveau<p class="border-2 border-gray-500 border-opacity-75 font-white font-semibold">16+</p><span class="font-semibold">Enfant - Tradition</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/lupinpetit.png" alt="" class="rounded"></a>
+                                        </div>
+                                        <div class="content">
+                                            <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-check-circle text-2xl"></i><i class="fas fa-thumbs-up text-xl"></i><i class="fas fa-thumbs-down text-xl"><i class="fas fa-arrow-alt-circle-down"></i></i></p>
+                                            <p class="text-green-500 font-semibold">Nouveau<p class="border-2 border-gray-500 border-opacity-75 font-white font-semibold">16+</p><span class="font-semibold">Enfant - Tradition</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/patpatouillepetit.png" alt="" class="rounded"></a>
+                                        </div>
+                                        <div class="content">
+                                            <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-check-circle text-2xl"></i><i class="fas fa-thumbs-up text-xl"></i><i class="fas fa-thumbs-down text-xl"><i class="fas fa-arrow-alt-circle-down"></i></i></p>
+                                            <p class="text-green-500 font-semibold">Nouveau<p class="border-2 border-gray-500 border-opacity-75 font-white font-semibold">16+</p><span class="font-semibold">Enfant - Tradition</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/tigrepetit.png" alt="" class="rounded"></a>
+                                        </div>
+                                        <div class="content">
+                                            <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-check-circle text-2xl"></i><i class="fas fa-thumbs-up text-xl"></i><i class="fas fa-thumbs-down text-xl"><i class="fas fa-arrow-alt-circle-down"></i></i></p>
+                                            <p class="text-green-500 font-semibold">Nouveau<p class="border-2 border-gray-500 border-opacity-75 font-white font-semibold">16+</p><span class="font-semibold">Enfant - Tradition</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/winxpetit.png" alt="" class="rounded"></a>
+                                        </div>
+                                        <div class="content">
+                                            <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-check-circle text-2xl"></i><i class="fas fa-thumbs-up text-xl"></i><i class="fas fa-thumbs-down text-xl"><i class="fas fa-arrow-alt-circle-down"></i></i></p>
+                                            <p class="text-green-500 font-semibold">Nouveau<p class="border-2 border-gray-500 border-opacity-75 font-white font-semibold">16+</p><span class="font-semibold">Enfant - Tradition</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- arrow right -->
+                    <div class="absolute right-0 rightArrow5" onClick="rightScroll('.scroll5','.rightArrow5')">
+                        <button id="" class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top 10 in France -->
+            <div class="pl-4 md:pl-8 lg:pl-12 xl:pl-16 py-4 text-white">
+                <p class="py-2 font-semibold text-xl">Top 10 in France</p>
+                <div class="flex items-center relative">
+                    <!-- arrow left -->
+                    <div class="absolute left-0 leftArrow6" onClick="leftScroll('.scroll6','.leftArrow6')">
+                        <button id="" class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-left"></i></button>
+                    </div>
+                     <!--Container Carousel-->
+                    <div class="container-carousel scroll6 overflow-hidden">
+                    <!--Carousel--> 
+                    <div class="carousel grid gap-2">
+                        <div class="genre">
+                            <div class="w-full overflow-hidden rounded">
+                                <div class="transform hover:scale-125 transition duration-500 ease-in-out">
+                                   
+                                        <div class="flex pics rounded w-32 h-44">
+                                            <a href="#"><img src="assets/img/ironfistgrand.png" alt=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="genre">
+                            <div class="w-full overflow-hidden rounded">
+                                <div class="transform hover:scale-125 transition duration-500 ease-in-out">
+                                    <div class="flex pics rounded w-32 h-44">
+                                        <a href="#"><img src="assets/img/n_emilyinparisgrand.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="genre">
+                            <div class="w-full overflow-hidden rounded">
+                                <div class="transform hover:scale-125 transition duration-500 ease-in-out">
+                                    <div class="flex pics rounded w-32 h-44">
+                                        <a href="#"><img src="assets/img/n_larevolutiongrand.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="genre">
+                            <div class="w-full overflow-hidden rounded">
+                                <div class="transform hover:scale-125 transition duration-500 ease-in-out">
+                                    <div class="flex pics rounded w-32 h-44">
+                                        <a href="#"><img src="assets/img/n_lucifergrand.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="genre">
+                            <div class="w-full overflow-hidden rounded">
+                                <div class="transform hover:scale-125 transition duration-500 ease-in-out">
+                                    <div class="flex pics rounded w-32 h-44">
+                                        <a href="#"><img src="assets/img/n_lupingrand.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>     
+                        <div class="genre">
+                            <div class="w-full overflow-hidden rounded">
+                                <div class="transform hover:scale-125 transition duration-500 ease-in-out">
+                                    <div class="flex pics rounded w-32 h-44">
+                                        <a href="#"><img src="assets/img/n_narcosgrand.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="genre">
+                            <div class="w-full overflow-hidden rounded">
+                                <div class="transform hover:scale-125 transition duration-500 ease-in-out">
+                                    <div class="flex pics rounded w-32 h-44">           
+                                        <a href="#"><img src="assets/img/n_riverdalegrand.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="genre">
+                            <div class="w-full overflow-hidden rounded">
+                                <div class="transform hover:scale-125 transition duration-500 ease-in-out">
+                                    <div class="flex pics rounded w-32 h-44">
+                                        <a href="#"><img src="assets/img/n_whentheyseeusgrand.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="genre">
+                            <div class="w-full overflow-hidden rounded">
+                                <div class="transform hover:scale-125 transition duration-500 ease-in-out">
+                                    <div class="flex pics rounded w-32 h-44">
+                                        <a href="#"><img src="assets/img/n_yougrand.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="genre">
+                            <div class="w-full overflow-hidden rounded">
+                                <div class="transform hover:scale-125 transition duration-500 ease-in-out">
+                                    <div class="flex pics rounded w-32 h-44">
+                                        <a href="#"><img src="assets/img/ironfistgrand.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+
+                    <!-- Arrow Right-->
+                    <div class="absolute right-0 rightArrow6" onClick="rightScroll('.scroll6','.rightArrow6')">
+                        <button id="" class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-right"></i></button>
+                    </div>
+                </div>
+            </div>    
+            
+    
+            <!-- New Release -->
+            <div class="pl-4 md:pl-8 lg:pl-12 xl:pl-16 py-4 text-white">
+                <p class="py-2 font-semibold text-xl">New Release</p>
+                <div class="flex items-center relative">
+                    <!-- arrow left -->
+                    <div class="absolute left-0 leftArrow7" onClick="leftScroll('.scroll7','.leftArrow7')">
+                        <button id="" class="p-4 h-20 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-left"></i></button>
+                    </div>
+                    <!--Container Carousel-->
+                        <div class="container-display">
+                          <div class="container grid gap-2">
+                              <div class="flex py-10 px-14">
+                            <!--Carousel-->
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/blackmirror.png" alt="" class="rounded"></a>
+                                        </div>
+                                        <div class="container">
+                                            <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p>
+                                            <p>S01:E01<span class="font-light"><br>Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                        </div>
+                                    </div> 
+                                </div>  
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/lupin.png" alt="" class="rounded"></a>
+                                        </div>
+                                        <div class="container">
+                                            <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p>
+                                            <p>S01:E01<span class="font-light"><br>Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/300.png" alt="" class="rounded"></a>
+                                        </div>
+                                        <div class="container">
+                                            <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p>
+                                            <p>S01:E01<span class="font-light"><br>Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                    <div class="box">
+                                        <div class="imgBox">
+                                            <div class="pics">
+                                                <a href="#"><img src="assets/img/enolaholmes.png" alt="" class="rounded"></a>
+                                            </div>
+                                            <div class="container">
+                                                <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p>
+                                                <p>S01:E01<span class="font-light"><br>Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box">
+                                        <div class="imgBox">
+                                            <div class="pics">
+                                                <a href="#"><img src="assets/img/theuniverse.png" alt="" class="rounded"></a>
+                                            </div>
+                                            <div class="container">
+                                                <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p>
+                                                <p>S01:E01<span class="font-light"><br>Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box">
+                                        <div class="imgBox">
+                                            <div class="pics">
+                                                <a href="#"><img src="assets/img/tigre blanc.png" alt="" class="rounded"></a>
+                                            </div>
+                                            <div class="container">
+                                                <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p>
+                                                <p>S01:E01<span class="font-light"><br>Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box">
+                                        <div class="imgBox">
+                                            <div class="pics">
+                                                <a href="#"><img src="assets/img/13reasonUS.png" alt="" class="rounded"></a>
+                                            </div>
+                                            <div class="container">
+                                                <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p>
+                                                <p>S01:E01<span class="font-light"><br>Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box">
+                                        <div class="imgBox">
+                                            <div class="pics">
+                                                <a href="#"><img src="assets/img/3_.png" alt="" class="rounded"></a>
+                                            </div>
+                                            <div class="container">
+                                                <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p>
+                                                <p>S01:E01<span class="font-light"><br>Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box">
+                                        <div class="imgBox">
+                                            <div class="pics">
+                                                <a href="#"><img src="assets/img/brainonfire.png" alt="" class="rounded"></a>
+                                            </div>
+                                            <div class="container">
+                                                <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p>
+                                                <p>S01:E01<span class="font-light"><br>Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box">
+                                        <div class="imgBox">
+                                            <div class="pics">
+                                                <a href="#"><img src="assets/img/aliceborderthriller.png" alt="" class="rounded"></a>
+                                            </div>
+                                            <div class="container">
+                                                <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p>
+                                                <p>S01:E01<span class="font-light"><br>Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    <!-- arrow right -->
+                    <div class="absolute right-0 rightArrow7" onClick="rightScroll('.scroll7','.rightArrow7')">
+                        <button id="" class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-right"></i></button>
+                    </div>
+                </div>
+            </div>
+    
+            
+            <!-- Others -->
+            <div class=" pl-4 md:pl-8 lg:pl-12 xl:pl-16 py-4 text-white">
+                <p class="py-2 font-semibold text-xl">Others</p>
+                <div class="flex items-center relative">
+                
+                     <!-- arrow left -->
+                    <div class="absolute left-0 leftArrow8" onClick="leftScroll('.scroll8','.leftArrow8')">
+                        <button id="" class="p-4 h-20 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-left"></i></button>
+                    </div>
+                    <!--Container Carousel-->
+                        <div class="container-display">
+                            <div class="container grid gap-2"> 
+                                <div class="flex py-10 px-14">
+                                <!--Carousel-->
+                                    <div class="box">
+                                        <div class="imgBox">
+                                            <div class="pics">
+                                                <a href="#"><img src="assets/img/heartUS.png" alt="" class="rounded"></a>
+                                            </div>
+                                            <div class="content">
+                                                <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p>
+                                                <p>S01:E01<span class="font-light"><br>Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box">
+                                        <div class="imgBox">
+                                            <div class="pics">
+                                                <a href="#"><img src="assets/img/homelandthriller.png" alt="" class="rounded"></a>
+                                            </div>
+                                            <div class="content">
+                                                <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p>
+                                                <p>S01:E01<span class="font-light"><br>Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box">
+                                        <div class="imgBox">
+                                            <div class="pics">
+                                                <a href="#"><img src="assets/img/orphanblackthriller.png" alt="" class="rounded"></a>
+                                            </div>
+                                            <div class="content">
+                                                <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p>
+                                                <p>S01:E01<span class="font-light"><br>Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box">
+                                        <div class="imgBox">
+                                            <div class="pics">
+                                                <a href="#"><img src="assets/img/hoteldelluna.png" alt="" class="rounded"></a>
+                                            </div>
+                                            <div class="content">
+                                                <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p>
+                                                <p>S01:E01<span class="font-light"><br>Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box">
+                                        <div class="imgBox">
+                                            <div class="pics">
+                                                <a href="#"><img src="assets/img/iamlegend.png" alt="" class="rounded"></a>
+                                            </div>
+                                            <div class="content">
+                                                <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p>
+                                                <p>S01:E01<span class="font-light"><br>Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box">
+                                        <div class="imgBox">
+                                            <div class="pics">
+                                                <a href="#"><img src="assets/img/inception.png" alt="" class="rounded"></a>
+                                            </div>
+                                            <div class="content">
+                                                <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p>
+                                                <p>S01:E01<span class="font-light"><br>Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box">
+                                        <div class="imgBox">
+                                            <div class="pics">
+                                                <a href="#"><img src="assets/img/insatiable.png" alt="" class="rounded"></a>
+                                            </div>
+                                            <div class="content">
+                                                <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p>
+                                                <p>S01:E01<span class="font-light"><br>Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box">
+                                        <div class="imgBox">
+                                            <div class="pics">
+                                                <a href="#"><img src="assets/img/insideman.png" alt="" class="rounded"></a>
+                                            </div>
+                                            <div class="content">
+                                                <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p>
+                                                <p>S01:E01<span class="font-light"><br>Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box">
+                                        <div class="imgBox">
+                                            <div class="pics">
+                                                <a href="#"><img src="assets/img/dynastieUS.png" alt="" class="rounded"></a>
+                                            </div>
+                                            <div class="content">
+                                                <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p>
+                                                <p>S01:E01<span class="font-light"><br>Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box">
+                                        <div class="imgBox">
+                                            <div class="pics">
+                                                <a href="#"><img src="assets/img/emilyinparis.png" alt="" class="rounded"></a>
+                                            </div>
+                                            <div class="content">
+                                                <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p>
+                                                <p>S01:E01<span class="font-light"><br>Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- arrow right -->
+                    <div class="absolute right-0 rightArrow8" onClick="rightScroll('.scroll8','.rightArrow8')">
+                        <button id="" class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Horror -->
+            <div class="pl-4 md:pl-8 lg:pl-12 xl:pl-16 py-4 text-white">
+                <p class="py-2 font-semibold text-xl">Horror</p>
+                <div class="flex items-center relative">
+                     <!-- arrow left -->
+                    <div class="absolute left-0 leftArrow9" onClick="leftScroll('.scroll9','.leftArrow9')">
+                        <button id="" class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-left"></i></button>
+                    </div>
+                    <!--Container Carousel-->
+                        <div class="container-display">
+                            <div class="carousel grid gap-2">
+                                <div class="flex py-10 px-14"> 
+                                    <!--Carousel-->
+                                    <div class="box">
+                                        <div class="imgBox">
+                                            <div class="pics">
+                                                <a href="#"><img src="assets/img/24US.png" alt="" class="rounded"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box">
+                                        <div class="imgBox">
+                                            <div class="pics">
+                                                <a href="#"><img src="assets/img/homelandthriller.png" alt="" class="rounded"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box">
+                                        <div class="imgBox">
+                                            <div class="pics">
+                                                <a href="#"><img src="assets/img/orphanblackthriller.png" alt="" class="rounded"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box">
+                                        <div class="imgBox">
+                                            <div class="pics">
+                                                <a href="#"><img src="assets/img/birdbox.png" alt="" class="rounded"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box">
+                                        <div class="imgBox">
+                                            <div class="pics">
+                                                <a href="#"><img src="assets/img/apretoithriller.png" alt="" class="rounded"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box">
+                                        <div class="imgBox">
+                                            <div class="pics">
+                                                <a href="#"><img src="assets/img/inception.png" alt="" class="rounded"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box">
+                                        <div class="imgBox">
+                                            <div class="pics">
+                                                <a href="#"><img src="assets/img/alteredcarbon.png" alt="" class="rounded"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box">
+                                        <div class="imgBox">
+                                            <div class="pics">
+                                                <a href="#"><img src="assets/img/insideman.png" alt="" class="rounded"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box">
+                                        <div class="imgBox">
+                                            <div class="pics">
+                                                <a href="#"><img src="assets/img/alienworlds.png" alt="" class="rounded"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box">
+                                        <div class="imgBox">
+                                            <div class="pics">
+                                                <a href="#"><img src="assets/img/3_.png" alt="" class="rounded"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- arrow right -->
+                    <div class="absolute right-0 rightArrow9" onClick="rightScroll('.scroll9','.rightArrow9')">
+                        <button id="" class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action -->
+            <div class="pl-4 md:pl-8 lg:pl-12 xl:pl-16 py-4 text-white">
+                <p class="py-2 font-semibold text-xl">Action</p>
+                <div class="flex items-center relative">
+                     <!-- arrow left -->
+                    <div class="absolute left-0 leftArrow10" onClick="leftScroll('.scroll10','.leftArrow10')">
+                        <button id="" class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-left"></i></button>
+                    </div>
+                    <!--Container Carousel-->
+                    <div class="container-carousel scroll10 overflow-hidden">
+                        <!--Carousel-->
+                        <div class="carousel grid gap-2  ">
+                            <div class="flex py-10 px-14">
+                                <div class="box">
+                                    <div class="imgBox">
+                                       <div class="pics">
+                                            <a href="#"><img src="assets/img/bloodUS.png" alt="" class="rounded"></a>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/boblazar.png" alt="" class="rounded"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/brainonfire.png" alt="" class="rounded"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/charliecomedie.png" alt="" class="rounded"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="imgBox">
+                                    <div class="pics">
+                                        <a href="#"><img src="assets/img/corpsebride.png" alt="" class="rounded"></a>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/inception.png" alt="" class="rounded"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/cursed.png" alt="" class="rounded"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/insideman.png" alt="" class="rounded"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/darktourist.png" alt="" class="rounded"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="imgBox">
+                                        <div class="pics">
+                                            <a href="#"><img src="assets/img/doctorstranger.png" alt="" class="rounded"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- arrow right -->
+                    <div class="absolute right-0 rightArrow10" onClick="rightScroll('.scroll10','.rightArrow10')">
+                        <button id="" class="p-4 h-32 hover:bg-black hover:opacity-50 focus:outline-none"><i class="fas fa-angle-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer class="w-4/6 mx-auto py-8 text-gray-600 text-xs">
+    
+                <div class="flex text-3xl space-x-5 py-4">
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+
+                <div class="grid gap-y-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4">
+                    <div>
+                        <a href="#">Audio and Subtitles</a>
+                    </div>
+                    <div>
+                        <a href="#">Audio Description</a>
+                    </div>
+                    <div>
+                        <a href="#">Help Center</a>
+                    </div>
+                    <div>
+                        <a href="#">Gift Cards</a>
+                    </div>
+                    <div>
+                        <a href="#">Media Center</a>
+                    </div>
+                    <div>
+                        <a href="#">Investor Relations</a>
+                    </div>
+                    <div>
+                        <a href="#">Jobs</a>
+                    </div>
+                    <div>
+                        <a href="#">Terms of Use</a>
+                    </div>
+                    <div>
+                        <a href="#">Privacy</a>
+                    </div>
+                    <div>
+                        <a href="#">Legal Notices</a>
+                    </div>
+                    <div>
+                        <a href="#">Cookie Preferences</a>
+                    </div>
+                    <div>
+                        <a href="#">Corporate Informations</a>
+                    </div>
+                    <div>
+                        <a href="#">Contact Us</a>
+                    </div>
+                    
+                </div>
+    
+                <div class="py-6 mt-6">
+                    <button class="p-2 border border-gray-600 cursor-pointer hover:text-white">Service Code</button>
+                </div>
+                
+            <p>&copy 1997-2021 Netflix, Inc. {i-0000000000000000000}</p>
+
+        </footer>
+
+        <script src="assets/main.js"></script>
+
+    </body>
 </html>
-
-
-
-
-
