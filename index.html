@@ -57,7 +57,7 @@
                         <!-- Description film à l'affiche -->
                         <p class="font-serif font-bold text-pink-500 text-xl uppercase ">The Bridgerton Chronicles</p>
                         <p class="font-bold text-lg text-pink-400 text-justify">Season 1</p>
-                        <p class="text-lg text-pink-300 text-justify ">As Daphne makes her London debut, a new tabloid scandal is stirring up good society and Simon, the coveted Duke of Hastings, returns to the city.</p>
+                        <p class="text-lg text-pink-300 text-justify">As Daphne makes her London debut, a new tabloid scandal is stirring up good society and Simon, the coveted Duke of Hastings, returns to the city.</p>
                         
                         <!-- Bouton play/info -->
                         <div class="flex space-x-4 flex-row w-full">
@@ -76,79 +76,141 @@
             
             <!-- Background-->
             <div class="absolute w-full h-48 bottom-0 bg-gradient-to-t from-black"></div>
-            <img src="assets/img/background.jpg" class="w-full h-screen object-cover -mt-2">       
+            <img src="assets/img/background.jpg" class="w-full h-screen object-cover -mt-6">       
         </div>
     
         <!-- catalog New series-->
         <section class="text-white py-8">
 
+            <div class="p-4 mb-40 grid gap-2 grid-cols-5">
+                <div class="movie-container">
+                    <img class="movie-hover rounded" src="assets/img/lupin.png">
+                    <video class="movie rounded" src="assets/vids/Lupinbd.mp4" muted loop onmouseover="this.play()" onmouseout="this.pause()"></video>
+                </div>
+            </div>
+            
 
-        <div class="flex pl-4 md:pl-8 lg:pl-12 xl:pl-16 py-4 text-white">
-        <p class="py-2 font-semibold text-xl">New series</p>
+        <div class="pl-4 md:pl-8 lg:pl-12 xl:pl-16 py-8 text-white">
         <div class="flex items-center relative">
-            <div class="flex py-8 px-8">
-                <div class="container-display">
-                    <div class="container grid gap-2">
-                        <div class="box">
-                            <div class="imgBox">
-                                <img src="assets/img/lacasadepapel.png" alt="" class="rounded">
-                            </div>
-                            <div class="content">
-                                <div>
-                                    <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p>
-                                    <p>S01:E01<span class="font-light"><br>La casa de papel une série espagnol</span></p>
-                                </div>
-                            </div>
+
+            <div class="container grid gap-2 grid-cols-5 z-20">
+                <div class="box rounded">
+                    <div class="relative hover:absolute transform hover:scale-125 transition duration-500 ease-in-out">
+
+                    <!-- Movie container -->
+                        <div class="movie-container">
+                            <img class="movie-hover rounded" src="assets/img/lupin.png">
+                            <video class="movie rounded" src="assets/vids/Lupinbd.mp4" muted loop onmouseover="this.play()" onmouseout="this.pause()"></video>
                         </div>
-                    </div>
-                </div>
-                <div class="container-display">
-                    <div class="container grid gap-2">
-                        <div class="box">
-                            <div class="imgBox">
-                                <img src="assets/img/larevolution.png" alt="" class="rounded">
-                            </div>
-                            <div class="content">
-                                <div>
+
+                        <div class="text-xs absolute -mt-1 top-0 flex items-end z-20 w-full h-full transform translate-y-64">
+                            
+                            <div class="bg-gray-900 w-full px-2 py-4 space-y-2">
+                                <!-- font awesome -->
+                                <div class="flex justify-between">
                                     <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p>
-                                    <p>S01:E01<span class="font-light"><br>Une série inspiré de la 2nd guerre...</span></p>
+                                    <p><i class="fas fa-play-circle text-2xl"></i></p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container-display">
-                    <div class="container grid gap-2">
-                        <div class="box">
-                            <div class="imgBox">
-                                <img src="assets/img/larnacoeurcomedie.png" alt="" class="rounded">
-                            </div>
-                            <div class="content">
-                                <div>
-                                    <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p>
-                                    <p>S01:E01<span class="font-light"><br> Las Vegas dans toute sa splendeur, la fête ne fait que commencé</span></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container-display">
-                    <div class="container grid gap-2">
-                        <div class="box">
-                            <div class="imgBox">
-                                <img src="assets/img/permisthriller.png" alt="" class="rounded">
-                            </div>
-                            <div class="content">
-                                <div>
-                                    <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p></p>
-                                    <p>S01:E01<span class="font-light">Série d'adolescent en quête de trouver l'amour qui tourne au drame</span></p>
+                                <!-- title container-->
+                                <p class="font-semibold">S01:E01<span class="font-light">La casa de papel une série espagnol</span></p>
+                                <!-- Progression bar container -->
+                                <div class="flex justify-between">
+                                    <div class="border-red bg-red-600 w-4/6 h-1 my-2"></div>
+                                        <p>40 of 41 min</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+            
+
+            <div class="container grid gap-2 grid-cols-5 z-20">
+                <div class="box rounded">
+                    <div class="relative hover:absolute transform hover:scale-125 transition duration-500 ease-in-out">
+
+                        <!-- Movie container -->
+                        <div class="movie-container">
+                            <img class="movie-hover rounded" src="assets/img/larevolution.png" alt="">
+                            <video class="movie rounded" src="assets/vids/Unauthorized.mp4" muted loop onmouseover="this.play()" onmouseout="this.pause()"></video>
+                        </div>
+
+                        <div class="text-xs absolute -mt-1 top-0 flex items-end z-20 w-full h-full transform translate-y-64">
+                            <!-- font awesome -->
+                            <div class="flex justify-between">
+                                <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p>
+                                <p><i class="fas fa-play-circle text-2xl"></i></p>
+                            </div>
+                            <!-- title container-->
+                            <p class="font-semibold">S01:E01<span class="font-light">La casa de papel une série espagnol</span></p>
+                        <!-- Progression bar container -->
+                        <div class="flex justify-between">
+                            <div class="border-red bg-red-600 w-4/6 h-1 my-2"></div>
+                                <p>40 of 41 min</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container grid gap-2 grid-cols-5 z-20">
+                <div class="box rounded">
+                    <div class="relative hover:absolute transform hover:scale-125 transition duration-500 ease-in-out">
+
+                        <!-- Movie container -->
+                        <div class="movie-container">
+                            <img class="movie-hover rounded" src="assets/img/larnacoeurcomedie.png" alt="">
+                            <video class="movie rounded" src="assets/vids/LAST VEGAS.mp4" muted loop onmouseover="this.play()" onmouseout="this.pause()"></video>
+                        </div>
+
+                        <div class="text-xs absolute -mt-1 top-0 flex items-end z-20 w-full h-full transform translate-y-64">
+                            <!-- font awesome -->
+                            <div class="flex justify-between">
+                                <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p>
+                                <p><i class="fas fa-play-circle text-2xl"></i></p>
+                            </div>
+                            <!-- title container-->
+                            <p class="font-semibold">S01:E01<span class="font-light">La casa de papel une série espagnol</span></p>
+                        <!-- Progression bar container -->
+                        <div class="flex justify-between">
+                            <div class="border-red bg-red-600 w-4/6 h-1 my-2"></div>
+                                <p>40 of 41 min</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        
+            <div class="container grid gap-2 grid-cols-5 z-20">
+                <div class="box rounded">
+                    <div class="relative hover:absolute transform hover:scale-125 transition duration-500 ease-in-out">
+
+                        <!-- Movie container -->
+                        <div class="movie-container">
+                            <img class="movie-hover rounded" src="assets/img/permisthriller.png" alt="">
+                            <video class="movie rounded" src="assets/vids/Bridgerton.mp4" muted loop onmouseover="this.play()" onmouseout="this.pause()"></video>
+                        </div>
+
+                        <div class="text-xs absolute -mt-1 top-0 flex items-end z-20 w-full h-full transform translate-y-64">
+                            <!-- font awesome -->
+                            <div class="flex justify-between">
+                                <p class="space-x-2"><i class="fas fa-play-circle text-2xl"></i><i class="fas fa-plus-circle text-2xl"></i></p>
+                                <p><i class="fas fa-play-circle text-2xl"></i></p>
+                            </div>
+                            <!-- title container-->
+                            <p class="font-semibold">S01:E01<span class="font-light">La casa de papel une série espagnol</span></p>
+                        <!-- Progression bar container -->
+                        <div class="flex justify-between">
+                            <div class="border-red bg-red-600 w-4/6 h-1 my-2"></div>
+                            <p>40 of 41 min</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
 
         <!-- My List -->
